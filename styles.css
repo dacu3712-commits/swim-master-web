@@ -931,3 +931,13 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 /* 채팅 입력줄이 오른쪽 💬 버튼을 가리지 않게: 도구 열 왼쪽까지만 */
 @media (orientation: portrait) { .chat-bar { left: calc(10px + var(--safe-l)); right: calc(84px + var(--safe-r)); width: auto; transform: none; } }
 .chat-bar input { min-width: 0; width: 0; } .chat-bar .btn { flex-shrink: 0; white-space: nowrap; }
+
+/* 상태창 더 작게: 평소엔 거리·숨·에너지·가방만, 누르면 레벨·칩·설명까지 */
+.pool-status { width: 112px; padding: 4px 7px; }
+.pool-status .ps-gauge .bar { height: 5px; }
+.pool-status .ps-gauge { grid-template-columns: 26px 1fr; font-size: 0.62rem; margin-top: 1px; }
+.pool-status .ps-row b { font-size: 0.98rem; }
+.pool-status:not(.big) .lv-row, .pool-status:not(.big) .ps-row.small { display: none; }
+.pool-status.big { width: 168px; }
+@media (orientation: portrait) { .pool-status { width: 112px; } .pool-status.big { width: 168px; } }
+@media (max-height: 500px) { .pool-status { width: 112px; } .pool-status.big { width: 150px; } }
