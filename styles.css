@@ -889,3 +889,8 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 /* 로그인 화면 뒤로 버튼 */
 .screen.login { position: relative; }
 .login-back { position: absolute; left: calc(10px + var(--safe-l)); top: calc(10px + var(--safe-t)); z-index: 3; }
+
+/* 가입 화면 아이디 확인 표시 */
+.id-hint { display: block; min-height: 1.2em; margin-top: 4px; font-size: 0.82rem; color: var(--muted, #7a6a55); }
+.id-hint.good { color: #1f9d55; }
+.id-hint.bad { color: #d6453b; }
