@@ -907,3 +907,8 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 @media (orientation: portrait) {
   .lane-ctl { flex-direction: column; left: calc(10px + var(--safe-l)); right: auto; top: 54%; bottom: auto; transform: none; z-index: 5; }
 }
+.mrow.on { background: #fff3c4; } .sel-all, .sel-one { display: inline-flex; align-items: center; gap: 6px; } .msel, #selAll { width: 18px; height: 18px; }
+.inbox-list { list-style: none; margin: 6px 0 8px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.inbox-list li { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; background: #f3f8fc; border-radius: 12px; padding: 6px 10px; }
+.inbox-list li > div { min-width: 0; overflow-wrap: anywhere; } .inbox-list p { margin: 2px 0 0; }
+#nickSave { white-space: nowrap; flex-shrink: 0; }
