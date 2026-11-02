@@ -391,7 +391,7 @@ table.splits td.best, table.splits tr.best td { color: var(--green); font-weight
 .dot-on { background: #6be08a; box-shadow: 0 0 0 3px rgba(107, 224, 138, 0.3); }
 .dot-off { background: #c9c2b6; }
 .dot-wait { background: #f2c75c; }
-.pool-status { position: absolute; left: calc(10px + var(--safe-l)); top: calc(54px + var(--safe-t)); width: 168px; background: rgba(255, 255, 255, 0.88); border-radius: 16px; padding: 8px 10px; box-shadow: 0 2px 10px rgba(44, 62, 102, 0.12); pointer-events: none; }
+.pool-status { position: absolute; left: calc(10px + var(--safe-l)); top: calc(54px + var(--safe-t) + var(--bn, 0px)); width: 168px; background: rgba(255, 255, 255, 0.88); border-radius: 16px; padding: 8px 10px; box-shadow: 0 2px 10px rgba(44, 62, 102, 0.12); pointer-events: none; }
 .ps-row { display: flex; align-items: baseline; gap: 6px; }
 .ps-row b { font-family: var(--title); font-size: 1.3rem; color: var(--navy); }
 .ps-row small { color: var(--muted); }
@@ -406,7 +406,7 @@ table.splits td.best, table.splits tr.best td { color: var(--green); font-weight
 .pp { padding: 4px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.95); color: var(--navy); font-weight: 700; font-size: 0.9rem; animation: ppop 1s ease-out forwards; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
 .pp.good { color: var(--green); } .pp.warn { color: #b8861f; } .pp.bad { color: var(--red); } .pp.reward { background: #fff3d6; color: #8a6618; } .pp.info { color: var(--sky-deep); }
 @keyframes ppop { 0% { opacity: 0; transform: translateY(8px) scale(0.9); } 15% { opacity: 1; transform: none; } 75% { opacity: 1; } 100% { opacity: 0; transform: translateY(-14px); } }
-.say-menu { position: absolute; right: calc(10px + var(--safe-r)); top: calc(52px + var(--safe-t)); display: none; flex-direction: column; gap: 4px; background: rgba(255, 255, 255, 0.97); border-radius: 16px; padding: 8px; box-shadow: 0 4px 16px rgba(44, 62, 102, 0.2); z-index: 5; }
+.say-menu { position: absolute; right: calc(10px + var(--safe-r)); top: calc(52px + var(--safe-t) + var(--bn, 0px)); display: none; flex-direction: column; gap: 4px; background: rgba(255, 255, 255, 0.97); border-radius: 16px; padding: 8px; box-shadow: 0 4px 16px rgba(44, 62, 102, 0.2); z-index: 5; }
 .say-menu.show { display: flex; }
 .say-menu button { border: 0; background: #eef6fc; border-radius: 12px; padding: 7px 12px; text-align: left; color: var(--navy); }
 .pool-bottom { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 calc(12px + var(--safe-r)) calc(10px + var(--safe-b)) calc(12px + var(--safe-l)); pointer-events: none; }
@@ -616,12 +616,12 @@ h1, h2, h3, .tile b, .act, .btn, .pill-btn, .strokes button, .big-ctl, .coin, .r
 .chat-log div { background: rgba(28,52,96,0.55); color: #fff; border-radius: 10px; padding: 2px 8px; font-size: 0.78rem; width: fit-content; max-width: 100%; }
 .chat-log div.mine { background: rgba(255,138,43,0.8); }
 .chat-log div.ai { background: rgba(120,120,120,0.55); }
-.chat-bar { position: absolute; left: 50%; top: calc(54px + var(--safe-t)); transform: translateX(-50%); display: flex; gap: 6px; width: min(92vw, 420px); z-index: 6; }
+.chat-bar { position: absolute; left: 50%; top: calc(54px + var(--safe-t) + var(--bn, 0px)); transform: translateX(-50%); display: flex; gap: 6px; width: min(92vw, 420px); z-index: 6; }
 .chat-bar input { flex: 1; min-height: 40px; border-radius: 999px; border: 3px solid #fff; padding: 0 14px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); font-size: 1rem; }
 #pAuto[aria-pressed="true"] { background: linear-gradient(#ffc04d, #ff8a2b); color: #fff; }
 @media (max-width: 900px) { .pool-top .pill-btn { padding: 5px 10px; min-height: 32px; font-size: 0.85rem; } .pool-top { gap: 4px; } #pTod { display: none; } }
 .pool-top { flex-wrap: nowrap; }
-.tools { position: absolute; right: calc(8px + var(--safe-r)); top: calc(52px + var(--safe-t)); display: flex; flex-direction: column; gap: 6px; z-index: 4; }
+.tools { position: absolute; right: calc(8px + var(--safe-r)); top: calc(52px + var(--safe-t) + var(--bn, 0px)); display: flex; flex-direction: column; gap: 6px; z-index: 4; }
 .tool { width: 52px; min-height: 50px; border: 3px solid #fff; border-radius: 16px; background: linear-gradient(#ffffff, #e8f2f9); box-shadow: 0 3px 0 #9bb7cc; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: var(--game); font-size: 0.68rem; color: var(--navy); padding: 2px; }
 .tool i { font-style: normal; font-size: 1.15rem; line-height: 1.1; }
 .tool[aria-pressed="true"] { background: linear-gradient(#ffc04d, #ff8a2b); color: #fff; box-shadow: 0 3px 0 #d4621a; }
@@ -844,3 +844,14 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .result-art { display: block; width: 120px; height: 180px; margin: -6px auto 4px; }
 .result-art.win { animation: win-bounce 0.9s ease-in-out infinite alternate; }
 @keyframes win-bounce { from { transform: translateY(0) } to { transform: translateY(-8px) } }
+
+/* 공지 배너: 상단 버튼줄 바로 아래. 아래쪽 도구·상태창은 --bn 만큼 밀려 내려가 가려지지 않는다 */
+.ann { position: absolute; left: calc(10px + var(--safe-l)); right: calc(10px + var(--safe-r)); top: calc(48px + var(--safe-t)); z-index: 6; display: flex; align-items: center; gap: 6px; padding: 6px 8px 6px 12px; border-radius: 16px; background: linear-gradient(#fff3c9, #ffd96b); color: #5a3d00; box-shadow: 0 3px 10px rgba(44, 62, 102, 0.22); font-family: var(--game); font-size: 0.8rem; line-height: 1.25; animation: pop-in 0.3s ease-out; }
+.ann[hidden] { display: none; }
+.ann-t { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.ann-t small { opacity: 0.7; }
+.ann button { flex: none; border: 0; border-radius: 999px; min-height: 34px; padding: 4px 12px; font-family: var(--game); font-size: 0.8rem; }
+.ann-go { background: linear-gradient(#ff9e4d, #ff6b1a); color: #fff; box-shadow: 0 2px 0 #c24f0d; }
+.ann-go:disabled { background: #cfc6b2; color: #fff; box-shadow: none; }
+.ann-x { background: rgba(255, 255, 255, 0.85); color: #5a3d00; }
+@media (orientation: landscape) and (max-height: 500px) { .ann { right: calc(200px + var(--safe-r)); left: calc(180px + var(--safe-l)); top: calc(8px + var(--safe-t)); } .pool-status, .chat-bar { --bn: 0px; } }
