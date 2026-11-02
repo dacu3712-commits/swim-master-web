@@ -1,0 +1,17 @@
+{
+  "name": "SWIM MASTER",
+  "short_name": "SWIM MASTER",
+  "description": "캐치와 호흡 타이밍으로 기록을 줄이는 2D 수영 육성 게임",
+  "lang": "ko",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#fbf6ec",
+  "theme_color": "#fbf6ec",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
