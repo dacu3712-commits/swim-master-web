@@ -902,3 +902,8 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .email-row .at { flex: none; color: var(--muted, #7a6a55); }
 .email-row select { flex: 0 0 44%; min-width: 0; }
 .field > #mex, .field > #uex, .field > #kex { margin-top: 6px; }
+
+/* 세로 화면: 레인 ▲▼ 버튼이 아래 영법 버튼에 가리던 문제 → 왼쪽 가운데 세로로 둔다 */
+@media (orientation: portrait) {
+  .lane-ctl { flex-direction: column; left: calc(10px + var(--safe-l)); right: auto; top: 54%; bottom: auto; transform: none; z-index: 5; }
+}
