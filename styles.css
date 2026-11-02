@@ -912,3 +912,22 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .inbox-list li { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; background: #f3f8fc; border-radius: 12px; padding: 6px 10px; }
 .inbox-list li > div { min-width: 0; overflow-wrap: anywhere; } .inbox-list p { margin: 2px 0 0; }
 #nickSave { white-space: nowrap; flex-shrink: 0; }
+
+/* 채팅창 열기/닫기 · 상태창 작게 */
+.chat-log[hidden], .chat-bar[hidden] { display: none; }
+.tool { position: relative; }
+.tool-badge { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 999px; background: #ff5a4f; color: #fff; font-style: normal; font-size: 0.7rem; font-weight: 700; line-height: 18px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+.pool-status { width: 128px; padding: 5px 8px; border-radius: 14px; }
+.pool-status .ps-row b { font-size: 1.05rem; }
+.pool-status .ps-row small { font-size: 0.68rem; }
+.pool-status .ps-gauge { grid-template-columns: 30px 1fr; gap: 4px; font-size: 0.66rem; margin-top: 2px; }
+.pool-status .ps-gauge .bar { height: 6px; }
+.pool-status .mini-chip { font-size: 0.62rem; padding: 2px 6px; }
+.pool-status .gear-chips span { font-size: 0.6rem; padding: 0 5px; }
+.pool-status .ps-tip { display: none; }
+.pool-status.big { width: 168px; } .pool-status.big .ps-tip { display: block; }
+@media (orientation: portrait) { .pool-status { width: 128px; } .pool-status.big { width: 168px; } }
+@media (max-height: 500px) { .pool-status { width: 128px; } .pool-status.big { width: 150px; } }
+/* 채팅 입력줄이 오른쪽 💬 버튼을 가리지 않게: 도구 열 왼쪽까지만 */
+@media (orientation: portrait) { .chat-bar { left: calc(10px + var(--safe-l)); right: calc(84px + var(--safe-r)); width: auto; transform: none; } }
+.chat-bar input { min-width: 0; width: 0; } .chat-bar .btn { flex-shrink: 0; white-space: nowrap; }
