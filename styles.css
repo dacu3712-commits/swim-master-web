@@ -885,3 +885,7 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 
 /* 낮은 화면(작은 폰 세로): 데크 아래 긴 안내 문구는 숨겨 오른쪽 도구 버튼과 겹치지 않게 */
 @media (max-height: 700px) and (orientation: portrait) { .deck-acts span.deck-hint { display: none; } }
+
+/* 로그인 화면 뒤로 버튼 */
+.screen.login { position: relative; }
+.login-back { position: absolute; left: calc(10px + var(--safe-l)); top: calc(10px + var(--safe-t)); z-index: 3; }
