@@ -470,7 +470,8 @@ table.splits td.best, table.splits tr.best td { color: var(--green); font-weight
 .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
 .menu-grid button { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; border: 2px solid var(--line); background: #fff; border-radius: 16px; padding: 10px 12px; color: var(--navy); }
 .menu-grid small { color: var(--muted); }
-@media (orientation: portrait) { .act.go { flex-basis: 100%; min-height: 58px; } .speech { top: 33%; } }
+@media (orientation: portrait) { .home-actions { gap: 6px; } .act { min-width: 54px; min-height: 60px; font-size: 0.8rem; } .act.go { flex-basis: 100%; min-height: 58px; } .speech { top: 33%; } }
+@media (orientation: portrait) and (max-width: 380px) { .home-actions { gap: 4px; } .act { min-width: 50px; font-size: 0.74rem; } }
 @media (max-height: 420px) {
   .needs { top: calc(54px + var(--safe-t)); padding: 6px 10px; gap: 3px; width: 180px; }
   .act { min-width: 58px; min-height: 56px; font-size: 0.78rem; }
