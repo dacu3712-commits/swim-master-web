@@ -943,3 +943,7 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 @media (max-height: 500px) { .pool-status { width: 112px; } .pool-status.big { width: 150px; } }
 
 .ad-promo { margin: 4px 0 8px; padding: 8px 12px; border-radius: 12px; background: linear-gradient(#fff3c9, #ffd96b); color: #5a3d00; font-family: var(--game); font-weight: 700; text-align: center; }
+
+.refresh-note { margin: 8px 0 0; font-size: 0.82rem; color: #3b4d73; line-height: 1.35; }
+.refresh-note b { color: #d9572a; } .refresh-note small { display: block; font-size: 0.72rem; color: #6b7a99; }
+@media (max-height: 500px) { .refresh-note { margin-top: 4px; font-size: 0.74rem; } .refresh-note small { display: inline; margin-left: 4px; } }
