@@ -941,3 +941,5 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .pool-status.big { width: 168px; }
 @media (orientation: portrait) { .pool-status { width: 112px; } .pool-status.big { width: 168px; } }
 @media (max-height: 500px) { .pool-status { width: 112px; } .pool-status.big { width: 150px; } }
+
+.ad-promo { margin: 4px 0 8px; padding: 8px 12px; border-radius: 12px; background: linear-gradient(#fff3c9, #ffd96b); color: #5a3d00; font-family: var(--game); font-weight: 700; text-align: center; }
