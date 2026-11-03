@@ -957,3 +957,11 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 
 .watch-chip { position: absolute; left: 50%; top: calc(100px + var(--safe-t)); transform: translateX(-50%); z-index: 6; border: 0; border-radius: 999px; padding: 7px 14px; font-family: var(--game); font-size: 0.85rem; color: #fff; background: linear-gradient(#ff7a59, #e2452c); box-shadow: 0 3px 0 #a5311c, 0 3px 10px rgba(0,0,0,0.2); }
 .watch-chip[hidden] { display: none; }
+
+/* 사우나 채팅 */
+.sauna-log { display: flex; flex-direction: column; gap: 2px; align-items: flex-start; max-height: 7.5em; overflow: hidden; pointer-events: none; }
+.sauna-log div { background: rgba(28,14,4,0.62); color: #fff3df; border-radius: 10px; padding: 2px 8px; font-size: 0.78rem; max-width: 90%; }
+.sauna-log div.mine { background: rgba(255,138,43,0.8); } .sauna-log div.ai { background: rgba(110,100,90,0.6); } .sauna-log div.inv { background: rgba(200,90,130,0.8); }
+.sauna-chat { display: flex; gap: 6px; }
+.sauna-chat input { flex: 1; min-width: 0; width: 0; min-height: 40px; border-radius: 999px; border: 2px solid rgba(255,226,176,0.7); background: rgba(255,248,236,0.95); padding: 0 14px; font-size: 1rem; }
+.sauna-chat .btn { flex-shrink: 0; white-space: nowrap; }
