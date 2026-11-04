@@ -528,8 +528,8 @@ table.splits td.best, table.splits tr.best td { color: var(--green); font-weight
 .recipe.off { opacity: 0.45; border-color: var(--line); }
 .recipe em { font-style: normal; font-size: 0.75rem; color: var(--muted); }
 .cook { margin-top: 10px; height: 250px; border-radius: 22px; background: linear-gradient(#ffe9c9, #f6d3a4); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
-.board { width: 220px; height: 130px; border: 0; border-radius: 26px; background: linear-gradient(#e8b47e, #c98a52); box-shadow: 0 6px 0 #a06a3a; display: grid; place-items: center; touch-action: none; cursor: pointer; transition: transform 0.15s; }
-.board.bowl { width: 170px; height: 150px; border-radius: 50% 50% 46% 46%; background: linear-gradient(#ffffff, #dfeff8); box-shadow: 0 6px 0 #a9c8dc; }
+.board:not(.screen) { width: 220px; height: 130px; border: 0; border-radius: 26px; background: linear-gradient(#e8b47e, #c98a52); box-shadow: 0 6px 0 #a06a3a; display: grid; place-items: center; touch-action: none; cursor: pointer; transition: transform 0.15s; }
+.board.bowl:not(.screen) { width: 170px; height: 150px; border-radius: 50% 50% 46% 46%; background: linear-gradient(#ffffff, #dfeff8); box-shadow: 0 6px 0 #a9c8dc; }
 .food-on { font-size: 3rem; pointer-events: none; }
 .food-on.done { font-size: 4.4rem; animation: bob 0.6s ease-in-out infinite alternate; }
 .kmsg { font-weight: 700; color: #7a4a20; text-align: center; padding: 0 10px; }
@@ -989,3 +989,62 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .drink-bar .db-name { white-space: nowrap; font-weight: 700; max-width: 9em; overflow: hidden; text-overflow: ellipsis; }
 .drink-bar .db-gauge { flex: 1; min-width: 50px; height: 10px; background: #e6e0d4; border-radius: 6px; overflow: hidden; } .drink-bar .db-gauge i { display: block; height: 100%; border-radius: 6px; transition: width 0.3s; }
 .drink-bar .btn { min-height: 30px; padding: 2px 12px; }
+.cafe-sec { font-weight: 800; margin: 10px 2px 4px; color: var(--ink, #2b2b2b); }
+.cafe-sec small { font-weight: 500; opacity: 0.7; }
+/* ✨ 더보기 허브 */
+.hub-card { max-height: 84vh; overflow-y: auto; }
+.hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+.hub-grid button { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 4px; border-radius: 14px; border: 1px solid rgba(0,0,0,0.08); background: #f6f9fc; font: 700 13px "Gowun Dodum", sans-serif; color: #2c3e66; }
+.hub-grid button i { font-style: normal; font-size: 26px; }
+.hub-grid .tool-badge, .chip-btn .tool-badge { position: absolute; top: -4px; right: -4px; }
+.chip-btn.hot { position: relative; background: linear-gradient(135deg, #ffe08a, #ffb86b); color: #5a3400; }
+.hub-event { margin: 8px 0; padding: 8px 10px; border-radius: 12px; background: #eef4fa; font-size: 13px; color: #3a5068; }
+.hub-event.on { background: linear-gradient(135deg, #fff1c2, #ffd6a0); color: #6a3d00; font-weight: 700; }
+.deck-hint.event { background: linear-gradient(135deg, #fff1c2, #ffd6a0); color: #6a3d00; font-weight: 800; border-radius: 10px; padding: 4px 10px; }
+.et-sub { display: block; margin: 12px 2px 4px; font-weight: 800; }
+.ms-row { display: flex; align-items: center; gap: 10px; padding: 8px 4px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.ms-row > div { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.ms-row.got { opacity: 0.55; }
+.ms-row em { font-style: normal; font-size: 12px; color: #7a8a9a; }
+.ms-bar { height: 6px; border-radius: 4px; background: #e3ebf3; overflow: hidden; }
+.ms-bar i { display: block; height: 100%; background: linear-gradient(90deg, #4fc3f7, #1f8fd6); }
+.attend-row { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin: 10px 0; }
+.att { display: flex; flex-direction: column; align-items: center; padding: 6px 0; border-radius: 10px; background: #f1f4f8; font-size: 11px; color: #6b7c8c; }
+.att b { font-size: 18px; } .att.on { background: linear-gradient(135deg, #c8f0d4, #8fdcaa); color: #1d5a32; } .att.big { outline: 2px solid #ffc94a; }
+.rec-list { margin: 8px 0; } .rec-row { display: flex; align-items: center; gap: 8px; padding: 7px 6px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.rec-row b { width: 28px; text-align: center; } .rec-row span { flex: 1; } .rec-row em { font-style: normal; font-weight: 800; color: #1f6fb2; }
+.rec-row.me { background: #fff6d6; border-radius: 8px; } .rec-mine { margin: 6px 2px; }
+.fr-row { display: flex; align-items: center; gap: 8px; padding: 7px 4px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.fr-row b { flex: 1; } .fr-row .dot { width: 9px; height: 9px; border-radius: 50%; background: #c3ccd5; } .fr-row .dot.on { background: #3ccf6e; }
+.whisper-bar { display: flex; gap: 6px; margin-top: 8px; } .whisper-bar input { flex: 1; min-width: 0; padding: 8px 10px; border-radius: 10px; border: 1px solid #cdd8e3; }
+.pool-log .whisper, #pLog .whisper, #sLog .whisper { color: #b04fd6; }
+.title-list { display: flex; flex-direction: column; gap: 6px; margin: 8px 0; }
+.title-row { display: grid; grid-template-columns: 34px 1fr auto; grid-template-rows: auto auto; align-items: center; text-align: left; padding: 8px 10px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.08); background: #f6f8fa; opacity: 0.55; }
+.title-row i { grid-row: span 2; font-style: normal; font-size: 22px; } .title-row small { grid-column: 2; color: #6b7c8c; } .title-row em { grid-row: 1 / span 2; grid-column: 3; font-style: normal; font-size: 12px; font-weight: 800; color: #1f6fb2; }
+.title-row.got { opacity: 1; background: #fffaf0; } .title-row.on { outline: 2px solid #ffc94a; }
+.lesson-card { margin: 10px 0; padding: 14px; border-radius: 14px; background: #eef7ff; } .lesson-card p { margin: 6px 0 0; line-height: 1.5; }
+.lesson-step { display: flex; gap: 4px; margin-bottom: 8px; } .lesson-step i { flex: 1; height: 5px; border-radius: 3px; background: #cfe0ef; } .lesson-step i.on { background: #1f8fd6; }
+.stamp-card { display: flex; flex-direction: column; gap: 4px; margin: 6px 0 8px; padding: 8px 10px; border-radius: 12px; background: #fff6e8; border: 1px dashed #e0a656; }
+.stamp-card span { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
+.stamp-card span i { aspect-ratio: 1; border-radius: 50%; border: 1.5px dashed #d8a465; display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 12px; }
+.stamp-card span i.on { background: #ffe2b5; border-style: solid; }
+.say-menu .emote-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; width: 100%; margin-bottom: 4px; }
+.say-menu .emote-row button { display: flex; flex-direction: column; align-items: center; padding: 6px 2px; }
+.say-menu .emote-row i { font-style: normal; font-size: 22px; } .say-menu .emote-row small { font-size: 10px; }
+.photo-mode .pool-status, .photo-mode .deck-acts, .photo-mode .pool-tools, .photo-mode .tools, .photo-mode .pool-top, .photo-mode .chat-bar, .photo-mode #pLog, .photo-mode .pool-bottom, .photo-mode .ann { visibility: hidden !important; }
+.photo-count { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 900 96px "Gowun Dodum", sans-serif; color: #fff; text-shadow: 0 4px 18px rgba(0,0,0,0.5); pointer-events: none; z-index: 50; }
+.photo-flash { position: absolute; inset: 0; background: #fff; animation: phflash 0.5s ease-out forwards; pointer-events: none; z-index: 51; }
+@keyframes phflash { from { opacity: 0.95; } to { opacity: 0; } }
+.photo-prev { width: 100%; border-radius: 12px; margin: 8px 0; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+/* 💬 게시판: 화면을 꽉 채우고 쓰기 쉽게 */
+.screen.board .wrap { max-width: 720px; width: 100%; box-sizing: border-box; }
+.board-form .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.board-form .opts .opt { width: 100%; min-height: 48px; font-size: 1rem; }
+.board-form .input { width: 100%; box-sizing: border-box; font-size: 1rem; }
+.board-form textarea.input { min-height: 160px; resize: vertical; line-height: 1.5; }
+.board-form .count { align-self: flex-end; font-size: 0.8rem; color: var(--muted); margin-top: -4px; }
+.screen.board .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.screen.board .post b { display: block; font-size: 1.05rem; margin: 6px 0 2px; }
+.screen.board .post p { margin: 4px 0 8px; line-height: 1.55; word-break: keep-all; overflow-wrap: anywhere; }
+.note.ok { border-color: #8fd3a8; background: #eefaf2; color: #1d5a32; }
+.guest-warn { position: absolute; z-index: 3; left: 12px; right: 12px; bottom: calc(160px + var(--safe-b, 0px)); display: block; margin: 0; padding: 8px 12px; border: 0; border-radius: 12px; background: rgba(255, 236, 190, 0.95); color: #6a3d00; font: 600 13px "Gowun Dodum", sans-serif; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
