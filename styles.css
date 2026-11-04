@@ -1048,3 +1048,23 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .screen.board .post p { margin: 4px 0 8px; line-height: 1.55; word-break: keep-all; overflow-wrap: anywhere; }
 .note.ok { border-color: #8fd3a8; background: #eefaf2; color: #1d5a32; }
 .guest-warn { position: absolute; z-index: 3; left: 12px; right: 12px; bottom: calc(160px + var(--safe-b, 0px)); display: block; margin: 0; padding: 8px 12px; border: 0; border-radius: 12px; background: rgba(255, 236, 190, 0.95); color: #6a3d00; font: 600 13px "Gowun Dodum", sans-serif; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+/* 데크 아래 버튼 정리: 놀거리 한 줄 · 아이콘 바 한 줄 · 영법+입수 한 줄 */
+.deck-acts { gap: 7px; }
+.spot-row { display: flex; gap: 6px; justify-content: center; }
+.spot-row .btn.small { min-height: 38px; padding: 6px 16px; font-size: 0.95rem; }
+.deck-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; width: 100%; padding: 5px; border-radius: 16px; background: rgba(255,255,255,0.88); box-shadow: 0 2px 10px rgba(0,0,0,0.12); box-sizing: border-box; }
+.deck-bar button { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 5px 0 4px; border: 0; border-radius: 12px; background: transparent; font: 700 0.68rem var(--game); color: var(--navy); white-space: nowrap; }
+.deck-bar button i { font-style: normal; font-size: 1.35rem; line-height: 1.1; }
+.deck-bar button:active { background: #e6f1f8; }
+.deck-bar button.on { background: #e3f1fb; }
+.deck-bar button.hot { background: linear-gradient(135deg, #fff1c2, #ffd6a0); }
+.deck-bar .tool-badge { position: absolute; top: -3px; right: 2px; }
+.enter-row { display: flex; align-items: stretch; gap: 6px; width: 100%; }
+.enter-row .btn.big { flex: 1; min-width: 0; padding-left: 8px; padding-right: 8px; white-space: nowrap; }
+.enter-row .btn.ghost { flex: none; padding: 0 14px; }
+.stroke-pick { flex: none; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 10px; border: 2px solid #cfe0ea; border-radius: 14px; background: #fff; font-family: var(--game); color: var(--navy); }
+.stroke-pick small { font-size: 0.6rem; color: #6b7c8c; } .stroke-pick b { font-size: 0.9rem; white-space: nowrap; }
+.bar.boost { position: relative; overflow: visible; } .boost-row label { color: #ff6a00; font-weight: 800; }
+.boost-row em { position: absolute; right: 2px; top: 50%; transform: translateY(-50%); font-style: normal; font-size: 0.55rem; font-weight: 900; color: #fff; text-shadow: 0 0 2px #b33a00, 0 0 2px #b33a00; }
+.bar.boost i { background: linear-gradient(90deg, #ffb300, #ff4d00); box-shadow: 0 0 6px rgba(255,90,0,0.7); animation: boostGlow 0.8s ease-in-out infinite alternate; }
+@keyframes boostGlow { from { filter: brightness(1); } to { filter: brightness(1.35); } }
