@@ -965,3 +965,12 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .sauna-chat { display: flex; gap: 6px; }
 .sauna-chat input { flex: 1; min-width: 0; width: 0; min-height: 40px; border-radius: 999px; border: 2px solid rgba(255,226,176,0.7); background: rgba(255,248,236,0.95); padding: 0 14px; font-size: 1rem; }
 .sauna-chat .btn { flex-shrink: 0; white-space: nowrap; }
+
+/* 채팅은 상태창 아래에 작게 (키보드가 올라와도 가려지지 않게 화면 위쪽에) */
+@media (orientation: portrait) {
+  .chat-bar { top: calc(152px + var(--safe-t)); left: calc(10px + var(--safe-l)); right: auto; width: min(250px, calc(100vw - 110px)); transform: none; gap: 4px; }
+  .chat-bar input { min-height: 34px; font-size: 0.9rem; padding: 0 12px; border-width: 2px; }
+  .chat-bar .btn { min-height: 34px; padding: 4px 10px; font-size: 0.8rem; }
+  .chat-log { top: calc(192px + var(--safe-t)); bottom: auto; left: calc(10px + var(--safe-l)); width: min(250px, calc(100vw - 110px)); max-height: 8.6em; overflow: hidden; justify-content: flex-start; }
+  .chat-log div { font-size: 0.74rem; padding: 1px 7px; }
+}
