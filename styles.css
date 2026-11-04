@@ -1068,3 +1068,8 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .boost-row em { position: absolute; right: 2px; top: 50%; transform: translateY(-50%); font-style: normal; font-size: 0.55rem; font-weight: 900; color: #fff; text-shadow: 0 0 2px #b33a00, 0 0 2px #b33a00; }
 .bar.boost i { background: linear-gradient(90deg, #ffb300, #ff4d00); box-shadow: 0 0 6px rgba(255,90,0,0.7); animation: boostGlow 0.8s ease-in-out infinite alternate; }
 @keyframes boostGlow { from { filter: brightness(1); } to { filter: brightness(1.35); } }
+.need.tap { cursor: pointer; } .need.tap label::after { content: ' ⓘ'; font-size: 0.7em; opacity: 0.7; }
+.mood-row { display: flex; gap: 10px; align-items: flex-start; padding: 8px 2px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.mood-row > i { font-style: normal; font-size: 26px; line-height: 1.2; }
+.mood-row > div { display: flex; flex-direction: column; gap: 2px; } .mood-row span { color: #3a6a9a; font-size: 0.9rem; } .mood-row small { color: #6b7c8c; }
+.mood-tips { margin-top: 10px; padding: 8px 10px; border-radius: 12px; background: #fff7e6; display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; }
