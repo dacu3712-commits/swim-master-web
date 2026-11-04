@@ -974,3 +974,18 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
   .chat-log { top: calc(192px + var(--safe-t)); bottom: auto; left: calc(10px + var(--safe-l)); width: min(250px, calc(100vw - 110px)); max-height: 8.6em; overflow: hidden; justify-content: flex-start; }
   .chat-log div { font-size: 0.74rem; padding: 1px 7px; }
 }
+
+.sauna-hint { text-align: center; font-size: 0.75rem; color: #ffe9c4; opacity: 0.9; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
+.sauna-stage canvas { touch-action: manipulation; cursor: pointer; }
+
+/* 카페 */
+.cafe-card { max-height: 82vh; overflow-y: auto; }
+.cafe-head { height: 120px; margin: -4px -4px 8px; border-radius: 14px; background-size: cover; background-position: center 38%; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px 12px; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.65); }
+.cafe-head .et-title { color: #fff; margin: 0; } .cafe-head small { opacity: 0.95; }
+.cafe-pts { text-align: right; font-size: 0.85rem; margin: 2px 4px 4px; } .cafe-pts b { color: #d9572a; }
+.cafe-row[disabled] { opacity: 0.5; }
+.cup-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgba(60,50,40,0.5); vertical-align: -1px; }
+.drink-bar { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.95); border-radius: 999px; padding: 4px 6px 4px 12px; box-shadow: 0 2px 8px rgba(44,62,102,0.18); font-size: 0.82rem; }
+.drink-bar .db-name { white-space: nowrap; font-weight: 700; max-width: 9em; overflow: hidden; text-overflow: ellipsis; }
+.drink-bar .db-gauge { flex: 1; min-width: 50px; height: 10px; background: #e6e0d4; border-radius: 6px; overflow: hidden; } .drink-bar .db-gauge i { display: block; height: 100%; border-radius: 6px; transition: width 0.3s; }
+.drink-bar .btn { min-height: 30px; padding: 2px 12px; }
