@@ -1119,3 +1119,18 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .pet-img { width: 96px; height: 96px; background: center/contain no-repeat; }
 .pet-card small { color: #7a6a55; font-size: 0.75rem; min-height: 2.4em; } .pet-card em { font-style: normal; font-weight: 800; color: #e2704a; }
 .pet-love { color: #ff6f91; letter-spacing: 1px; }
+/* 🐾 펫 놀이터 · 펫 용품 */
+.park-wrap { padding-top: 8px; }
+.park-stage { position: relative; height: min(46vh, 420px); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+.park-stage canvas { width: 100%; height: 100%; display: block; touch-action: manipulation; }
+.park-hint { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); font-size: 0.75rem; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.5); pointer-events: none; }
+.park-panel .col.grow { flex: 1; display: flex; flex-direction: column; gap: 2px; } .park-name small { font-weight: 500; color: #8a7a65; margin-left: 4px; }
+.pet-img.sm { width: 72px; height: 72px; flex: none; } .pet-img.xs { width: 34px; height: 34px; display: inline-block; vertical-align: middle; background: center/contain no-repeat; }
+.park-items { display: flex; gap: 6px; flex-wrap: wrap; }
+.park-it { display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; border: 2px solid #f0e2c8; background: #fffaf0; font: 700 0.8rem var(--game, "Gowun Dodum"); color: #4a3a2a; }
+.park-it i { font-style: normal; font-size: 1.1rem; } .park-it em { font-style: normal; color: #e2704a; margin-left: 2px; } .park-it.on { border-color: #ffc94a; background: #fff3cc; }
+.park-list { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+.park-pet { display: flex; align-items: center; gap: 4px; padding: 4px 10px 4px 4px; border-radius: 999px; border: 2px solid #e3d4bf; background: #fff; font: 700 0.85rem var(--game, "Gowun Dodum"); } .park-pet.on { border-color: #ffc94a; } .park-pet em { font-style: normal; }
+.pet-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin: 4px 0 10px; }
+.pet-item { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 8px; border-radius: 14px; border: 2px solid #f0e2c8; background: #fffaf0; text-align: center; }
+.pet-item i { font-style: normal; font-size: 2rem; } .pet-item small { color: #7a6a55; font-size: 0.72rem; min-height: 2.2em; } .pet-item.own { background: #f3fbf5; border-color: #bfe0c8; } .pet-item em.ok { font-style: normal; color: #2f8a4f; font-weight: 700; font-size: 0.8rem; }
