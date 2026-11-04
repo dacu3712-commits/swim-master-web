@@ -1103,3 +1103,19 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .care-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 14px; border: 1px solid rgba(0,0,0,0.08); background: #f7f9fb; font: 700 0.95rem var(--game, "Gowun Dodum"); color: #3b4a5a; text-align: left; }
 .care-item i { font-style: normal; font-size: 1.4rem; } .care-item b { flex: 1; } .care-item em { font-style: normal; color: #9aa7b3; font-size: 0.85rem; }
 .care-item.hot { background: #fff1e6; border-color: #ffc29e; } .care-item.hot em { color: #ff7a45; font-weight: 800; }
+.speech.follow { transform: translate(-50%, -100%); max-width: min(72vw, 300px); z-index: 2; }
+@media (orientation: portrait) { .speech.follow { top: auto; } }
+.care-item span { flex: 1; display: flex; flex-direction: column; gap: 1px; } .care-item span small { font-weight: 500; font-size: 0.75rem; color: #7a8a9a; }
+.care-item.done { opacity: 0.6; background: #f3f5f7; }
+.gog-stage { position: relative; width: 100%; max-width: 420px; margin: 8px auto 4px; touch-action: none; }
+.gog-stage canvas { display: block; } .gog-stage #gFog { position: absolute; left: 0; top: 0; cursor: grab; touch-action: none; }
+.gog-stage.shine::after { content: '✨'; position: absolute; left: 50%; top: 40%; font-size: 48px; transform: translate(-50%, -50%); animation: shineUp 0.9s ease-out forwards; }
+@keyframes shineUp { from { opacity: 1; transform: translate(-50%, -30%) scale(0.6); } to { opacity: 0; transform: translate(-50%, -90%) scale(1.4); } }
+.gog-meter { height: 8px; border-radius: 4px; background: #e3ebf3; overflow: hidden; } .gog-meter i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #8fd0f2, #1f8fd6); transition: width 0.15s; }
+/* 🐾 반려동물 가게 */
+.pet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 8px 0; }
+.pet-card { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 8px; border-radius: 16px; border: 2px solid #f0e2c8; background: #fffaf0; text-align: center; }
+.pet-card.own { border-color: #bfe0c8; background: #f3fbf5; } .pet-card.on { border-color: #ffc94a; box-shadow: 0 0 0 3px rgba(255,201,74,0.25); }
+.pet-img { width: 96px; height: 96px; background: center/contain no-repeat; }
+.pet-card small { color: #7a6a55; font-size: 0.75rem; min-height: 2.4em; } .pet-card em { font-style: normal; font-weight: 800; color: #e2704a; }
+.pet-love { color: #ff6f91; letter-spacing: 1px; }
