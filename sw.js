@@ -1,5 +1,5 @@
 // 오프라인 실행용 서비스 워커: 게임 파일은 캐시 우선, 글꼴은 받아 두었다가 오프라인에서 재사용
-const CACHE = 'swim-master-e730dbc81b';
+const CACHE = 'swim-master-b9f0f73d02';
 const ASSETS = ['./', './index.html', './app.js', './styles.css', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
@@ -34,4 +34,10 @@ self.addEventListener('fetch', (e) => {
       return res;
     }).catch(() => caches.match('./index.html')))
   );
+});
+
+// 🔔 알림을 누르면 열려 있는 게임 창으로(없으면 새로 연다)
+self.addEventListener('notificationclick', (e) => {
+  e.notification.close();
+  e.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => { for (const c of list) if ('focus' in c) return c.focus(); return self.clients.openWindow ? self.clients.openWindow('./') : null; }));
 });

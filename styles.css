@@ -930,6 +930,8 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .pool-status .ps-gauge { grid-template-columns: 30px 1fr; gap: 4px; font-size: 0.66rem; margin-top: 2px; }
 .pool-status .ps-gauge .bar { height: 6px; }
 .pool-status .mini-chip { font-size: 0.62rem; padding: 2px 6px; }
+.pool-status .wx-chip { margin-left: auto; background: #fff6d6; white-space: nowrap; }
+.pool-status .ps-row small { white-space: nowrap; }
 .pool-status .gear-chips span { font-size: 0.6rem; padding: 0 5px; }
 .pool-status .ps-tip { display: none; }
 .pool-status.big { width: 168px; } .pool-status.big .ps-tip { display: block; }
@@ -1143,3 +1145,16 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 @keyframes nvPulse { 50% { transform: translateX(-50%) scale(1.04); } }
 .home-refresh { position: absolute; right: 12px; top: calc(70px + var(--safe-t, 0px)); z-index: 4; }
 .newver-banner { white-space: nowrap; max-width: calc(100vw - 24px); }
+/* 🛋 방 꾸미기 */
+.home-deco { position: absolute; right: 12px; top: calc(118px + var(--safe-t, 0px)); z-index: 4; border: 0; border-radius: 999px; padding: 7px 12px; background: rgba(255,255,255,0.92); color: var(--navy); font: 700 13px var(--game, sans-serif); box-shadow: 0 2px 8px rgba(120,90,60,0.18); }
+.deco-bar { position: absolute; left: 10px; right: 10px; bottom: calc(14px + var(--safe-b, 0px)); z-index: 5; display: flex; align-items: center; gap: 6px; padding: 10px 12px; border-radius: 16px; background: rgba(255,250,240,0.96); box-shadow: 0 4px 14px rgba(0,0,0,0.18); font: 600 13px "Gowun Dodum", sans-serif; }
+.deco-bar span { flex: 1; }
+.deco-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; margin: 6px 0 10px; }
+.deco-it { border: 2px solid #ecdcc2; border-radius: 14px; background: #fffdf8; padding: 8px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; font: 700 12px "Gowun Dodum", sans-serif; color: var(--navy); }
+.deco-it i { font-style: normal; font-size: 30px; line-height: 1.1; }
+.deco-it i.sw { width: 44px; height: 30px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); }
+.deco-it small { font-weight: 600; color: #8a6d4a; }
+.deco-it.on { border-color: #ff8a3d; background: #fff1e4; }
+.deco-it:disabled { opacity: 0.45; }
+/* 🌊 바다 수영 버튼: 수영 중에만, 왼쪽 위(상태판 아래) */
+.sea-float { position: absolute; left: calc(12px + var(--safe-l, 0px)); top: calc(150px + var(--safe-t, 0px)); z-index: 4; border: 0; border-radius: 999px; padding: 7px 12px; background: linear-gradient(180deg, #4cc3ff, #1b86d8); color: #fff; font: 800 13px var(--game, sans-serif); box-shadow: 0 3px 10px rgba(0,60,120,0.3); }
