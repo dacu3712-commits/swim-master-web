@@ -1177,3 +1177,18 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .dive-row.compact .dive-h { flex: 1.2; font: 700 0.86rem var(--game, sans-serif); color: var(--navy); white-space: nowrap; }
 .dive-row.compact .btn { flex: 0 0 auto; padding: 6px 10px; }
 #dvJump small { font-size: 0.72rem; opacity: 0.85; }
+/* 🧭 첫걸음 퀘스트 */
+.ob-chip { position: absolute; left: calc(128px + var(--safe-l, 0px)); max-width: calc(100% - 196px); overflow: hidden; text-overflow: ellipsis; top: calc(54px + var(--safe-t, 0px)); z-index: 4; border: 2px solid #ffd23f; border-radius: 999px; padding: 5px 12px; background: rgba(255,250,235,0.96); color: var(--navy); font: 700 12px var(--game, sans-serif); white-space: nowrap; box-shadow: 0 3px 10px rgba(0,0,0,0.15); animation: ob-pulse 1.6s ease-in-out infinite; }
+@keyframes ob-pulse { 50% { box-shadow: 0 3px 16px rgba(255,190,40,0.6); } }
+.ob-list { margin: 8px 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; text-align: left; }
+.ob-list li { border: 2px solid #ecdcc2; border-radius: 12px; padding: 8px 10px; background: #fffdf8; }
+.ob-list li b { display: block; } .ob-list li small { color: #8a6d4a; }
+.ob-list li.now { border-color: #ffb21e; background: #fff6dd; } .ob-list li.done { opacity: 0.6; }
+/* 📚 코치 책 */
+.book-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 6px 0 10px; }
+.book-c { width: 92px; height: 128px; border-radius: 8px; padding: 10px 9px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 4px 4px 0 rgba(20,34,58,0.25); text-align: left; }
+.book-c b { font: 900 1rem/1.2 var(--game, sans-serif); } .book-c small { font-size: 0.66rem; }
+.book-c.dark { background: #14223a; color: #fff; } .book-c.dark small { color: #7fd3ff; }
+.book-c.light { background: #f4ecdc; color: #14223a; border: 2px solid #c9d9e8; }
+.book-plus { font: 900 2rem var(--game, sans-serif); color: #2f86ea; }
+.yt-btn { background: #ff3b30 !important; color: #fff !important; margin-top: 6px; } .yt-btn small { opacity: .85; }
