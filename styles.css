@@ -1158,3 +1158,9 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .deco-it:disabled { opacity: 0.45; }
 /* 🌊 바다 수영 버튼: 수영 중에만, 왼쪽 위(상태판 아래) */
 .sea-float { position: absolute; left: calc(12px + var(--safe-l, 0px)); top: calc(150px + var(--safe-t, 0px)); z-index: 4; border: 0; border-radius: 999px; padding: 7px 12px; background: linear-gradient(180deg, #4cc3ff, #1b86d8); color: #fff; font: 800 13px var(--game, sans-serif); box-shadow: 0 3px 10px rgba(0,60,120,0.3); }
+/* 🤿 다이빙대 */
+.dive-row { display: flex; gap: 8px; width: 100%; }
+.dive-row .btn { flex: 1; }
+.dive-pose { background: linear-gradient(180deg, #ff9a3c, #ff5c2b) !important; color: #fff !important; font-size: 1.25rem !important; min-height: 72px; animation: pulse-pose 0.5s infinite alternate; }
+.dive-pose.done { background: linear-gradient(180deg, #4cc38a, #2b9a63) !important; animation: none; }
+@keyframes pulse-pose { from { transform: scale(1); } to { transform: scale(1.04); } }
