@@ -1054,7 +1054,7 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .deck-acts { gap: 7px; }
 .spot-row { display: flex; gap: 6px; justify-content: center; }
 .spot-row .btn.small { min-height: 38px; padding: 6px 16px; font-size: 0.95rem; }
-.deck-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; width: 100%; padding: 5px; border-radius: 16px; background: rgba(255,255,255,0.88); box-shadow: 0 2px 10px rgba(0,0,0,0.12); box-sizing: border-box; }
+.deck-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; width: 100%; padding: 5px; border-radius: 16px; background: rgba(255,255,255,0.88); box-shadow: 0 2px 10px rgba(0,0,0,0.12); box-sizing: border-box; }
 .deck-bar button { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 5px 0 4px; border: 0; border-radius: 12px; background: transparent; font: 700 0.68rem var(--game); color: var(--navy); white-space: nowrap; }
 .deck-bar button i { font-style: normal; font-size: 1.35rem; line-height: 1.1; }
 .deck-bar button:active { background: #e6f1f8; }
@@ -1164,3 +1164,11 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .dive-pose { background: linear-gradient(180deg, #ff9a3c, #ff5c2b) !important; color: #fff !important; font-size: 1.25rem !important; min-height: 72px; animation: pulse-pose 0.5s infinite alternate; }
 .dive-pose.done { background: linear-gradient(180deg, #4cc38a, #2b9a63) !important; animation: none; }
 @keyframes pulse-pose { from { transform: scale(1); } to { transform: scale(1.04); } }
+/* 📢 공지사항 */
+.notices { display: flex; flex-direction: column; gap: 10px; max-height: 62vh; overflow-y: auto; text-align: left; }
+.notice { position: relative; background: #fffdf8; border: 2px solid #ecdcc2; border-radius: 14px; padding: 10px 12px; }
+.notice.pin { border-color: #ff9a3c; background: linear-gradient(180deg, #fff4e4, #fffdf8); }
+.notice > b { display: block; font-size: 1rem; color: var(--navy); }
+.notice small { color: #9b8466; }
+.notice ul { margin: 6px 0 0; padding-left: 18px; font-size: 0.88rem; line-height: 1.5; }
+.notice .new { position: absolute; right: 10px; top: 8px; font-style: normal; font-size: 0.66rem; font-weight: 800; color: #fff; background: #ff5c5c; border-radius: 8px; padding: 1px 6px; }
