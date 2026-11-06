@@ -1192,3 +1192,6 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .book-c.light { background: #f4ecdc; color: #14223a; border: 2px solid #c9d9e8; }
 .book-plus { font: 900 2rem var(--game, sans-serif); color: #2f86ea; }
 .yt-btn { background: #ff3b30 !important; color: #fff !important; margin-top: 6px; } .yt-btn small { opacity: .85; }
+.hub-tabs { display: flex; gap: 6px; justify-content: center; margin: 6px 0 4px; }
+.hub-tabs .chip-btn { position: relative; }
+.fw-float { position: absolute; left: calc(12px + var(--safe-l, 0px)); top: calc(192px + var(--safe-t, 0px)); z-index: 4; border: 0; border-radius: 999px; padding: 7px 12px; background: linear-gradient(180deg, #7b5cff, #3a2a9a); color: #fff; font: 800 13px var(--game, sans-serif); box-shadow: 0 3px 10px rgba(40,20,120,0.35); animation: ob-pulse 1.4s ease-in-out infinite; }
