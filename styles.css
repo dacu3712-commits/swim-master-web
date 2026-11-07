@@ -24,6 +24,7 @@
   --safe-t: env(safe-area-inset-top, 0px);
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html.big-text, html.big-text body { font-size: 17.5px !important; } /* 🔠 큰 글씨: rem 단위가 다 같이 커진다 */
 html, body { margin: 0; height: 100%; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5; overscroll-behavior: none; }
 body { background-image: radial-gradient(rgba(160, 130, 90, 0.05) 1px, transparent 1px); background-size: 6px 6px; }
 #app { min-height: 100%; }
