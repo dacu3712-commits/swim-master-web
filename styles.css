@@ -1196,3 +1196,16 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .hub-tabs { display: flex; gap: 6px; justify-content: center; margin: 6px 0 4px; }
 .hub-tabs .chip-btn { position: relative; }
 .fw-float { position: absolute; left: calc(12px + var(--safe-l, 0px)); top: calc(192px + var(--safe-t, 0px)); z-index: 4; border: 0; border-radius: 999px; padding: 7px 12px; background: linear-gradient(180deg, #7b5cff, #3a2a9a); color: #fff; font: 800 13px var(--game, sans-serif); box-shadow: 0 3px 10px rgba(40,20,120,0.35); animation: ob-pulse 1.4s ease-in-out infinite; }
+/* 🔄 플립턴 · 🐬 돌핀킥 버튼 (벽 앞 / 물속에서만) */
+.flip-prompt { bottom: calc(165px + var(--safe-b)); animation: none; background: linear-gradient(#5ec8ff, #1f7fd6); box-shadow: 0 6px 0 #124f8a; }
+.flip-prompt.zone { background: linear-gradient(#7dff9a, #18b84a); box-shadow: 0 6px 0 #0d6d2b, 0 0 22px #7dff9a; }
+.flip-prompt.zone small::after { content: ' · 지금!'; }
+.uwk-prompt { bottom: calc(165px + var(--safe-b)); width: 190px; animation: none; background: linear-gradient(#58e0d6, #138a9a); box-shadow: 0 6px 0 #0b5560; }
+.uwk-prompt.warn { background: linear-gradient(#ffb36b, #e0571a); box-shadow: 0 6px 0 #8a2e0b; }
+.flip-prompt:active, .uwk-prompt:active { transform: translateX(-50%) translateY(4px); box-shadow: none; }
+/* 🌉 전체 화면에서 멀리 갔을 때 되돌아오기 */
+.sea-float.hg-back { top: calc(196px + var(--safe-t, 0px)); background: linear-gradient(180deg, #ffb74d, #ef6c00); }
+.pools-paper { max-height: 80vh; overflow-y: auto; }
+.pool-region { display: flex; flex-direction: column; margin-top: 8px; padding: 6px 4px 2px; border-top: 2px dashed var(--line); }
+.pool-region small { color: var(--muted); font-size: 0.75rem; }
+.pool-row b small { display: block; font-weight: 400; font-size: 0.72rem; color: var(--muted); }
