@@ -1209,3 +1209,6 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .pool-region { display: flex; flex-direction: column; margin-top: 8px; padding: 6px 4px 2px; border-top: 2px dashed var(--line); }
 .pool-region small { color: var(--muted); font-size: 0.75rem; }
 .pool-row b small { display: block; font-weight: 400; font-size: 0.72rem; color: var(--muted); }
+/* 🏊 한강 오픈워터: 옆 수영장 들어가기 · 방향 바꾸기 */
+.sea-float.hg-enter { top: calc(242px + var(--safe-t, 0px)); background: linear-gradient(180deg, #66e08a, #1fa34a); animation: promo-pulse 0.9s ease-in-out infinite; }
+.sea-float.hg-turn { top: calc(288px + var(--safe-t, 0px)); background: linear-gradient(180deg, #8fa6c2, #4d6585); }
