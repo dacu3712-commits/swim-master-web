@@ -1224,3 +1224,6 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .ow-row.on { border-color: #1fa34a; background: #effbf2; }
 .fw-float.air-float { top: calc(238px + var(--safe-t, 0px)); background: linear-gradient(180deg, #2b2f38, #0f1115); color: #ffd400; }
 .fw-float.feed-float { top: calc(284px + var(--safe-t, 0px)); background: linear-gradient(180deg, #5fd0ff, #1d7fd1); animation: promo-pulse 1s ease-in-out infinite; }
+.race-tabs { align-items: center; flex-wrap: wrap; }
+.race-tabs > b { font-size: 0.8rem; color: var(--navy); margin-right: 2px; }
+.race-tabs small { font-size: 0.68rem; opacity: 0.7; }
