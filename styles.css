@@ -1098,7 +1098,8 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 @keyframes bubUp { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-120px); opacity: 0; } }
 .gog-wipe { position: relative; display: block; margin: 10px auto; width: 160px; height: 160px; border-radius: 50%; border: 0; background: #e8f4fb; font-size: 100px; overflow: hidden; }
 .gog-wipe .fogl { position: absolute; inset: 0; background: radial-gradient(circle, rgba(255,255,255,0.95), rgba(220,230,235,0.85)); transition: opacity 0.2s; }
-.gog-fog { position: absolute; inset: 0; z-index: 4; pointer-events: none; background: radial-gradient(ellipse at center, rgba(255,255,255,0.35) 0%, rgba(235,242,246,0.75) 60%, rgba(225,235,240,0.9) 100%); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); transition: opacity 3s; }
+.gog-fog { position: absolute; inset: 0; z-index: 4; pointer-events: auto; background: radial-gradient(ellipse at center, rgba(255,255,255,0) 45%, rgba(235,242,246,0.45) 80%, rgba(225,235,240,0.7) 100%); transition: opacity 0.8s; } /* 가장자리만 뿌옇게(흐림 필터 없음) */
+.gog-fog.clear { pointer-events: none; }
 .gog-fog.clear { opacity: 0; }
 .care-row { justify-content: center; }
 .care-chip.all { border-color: #cfe0ea; }
@@ -1222,3 +1223,4 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .ow-row small { color: var(--muted); font-size: 0.75rem; }
 .ow-row.on { border-color: #1fa34a; background: #effbf2; }
 .fw-float.air-float { top: calc(238px + var(--safe-t, 0px)); background: linear-gradient(180deg, #2b2f38, #0f1115); color: #ffd400; }
+.fw-float.feed-float { top: calc(284px + var(--safe-t, 0px)); background: linear-gradient(180deg, #5fd0ff, #1d7fd1); animation: promo-pulse 1s ease-in-out infinite; }
