@@ -1213,3 +1213,12 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .sea-float.hg-enter { top: calc(242px + var(--safe-t, 0px)); background: linear-gradient(180deg, #66e08a, #1fa34a); animation: promo-pulse 0.9s ease-in-out infinite; }
 .sea-float.hg-turn { top: calc(288px + var(--safe-t, 0px)); background: linear-gradient(180deg, #8fa6c2, #4d6585); }
 .deck-bar button.hg-go { background: linear-gradient(180deg, #e3f5ff, #c4e8ff); color: #0b5c99; }
+/* 🌊 오픈워터 고르기 */
+.ow-list { display: flex; flex-direction: column; gap: 6px; margin: 8px 0; }
+.ow-row { display: flex; align-items: center; gap: 10px; border: 2px solid var(--line); border-radius: 14px; background: #fff; padding: 9px 12px; text-align: left; color: var(--navy); }
+.ow-row i { font-style: normal; font-size: 1.7rem; }
+.ow-row b { display: block; font-family: var(--game); font-size: 1.02rem; }
+.ow-row b em { font-style: normal; font-size: 0.7rem; color: #fff; background: #1fa34a; border-radius: 8px; padding: 1px 6px; margin-left: 4px; }
+.ow-row small { color: var(--muted); font-size: 0.75rem; }
+.ow-row.on { border-color: #1fa34a; background: #effbf2; }
+.fw-float.air-float { top: calc(238px + var(--safe-t, 0px)); background: linear-gradient(180deg, #2b2f38, #0f1115); color: #ffd400; }
