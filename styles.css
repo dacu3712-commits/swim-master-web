@@ -1227,3 +1227,25 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .race-tabs { align-items: center; flex-wrap: wrap; }
 .race-tabs > b { font-size: 0.8rem; color: var(--navy); margin-right: 2px; }
 .race-tabs small { font-size: 0.68rem; opacity: 0.7; }
+/* 📊 관리자 운영 숫자 */
+.adm-stats h3 small { font-weight: 400; font-size: 0.75rem; }
+.st-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 8px 0 12px; }
+.st-tile { background: var(--paper2, #f4f8fb); border: 1px solid var(--line); border-radius: 10px; padding: 7px 8px; display: flex; flex-direction: column; min-width: 0; }
+.st-tile small { font-size: 0.7rem; color: var(--muted, #6b7785); }
+.st-tile b { font-size: 1.05rem; font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st-tile em { font-style: normal; font-size: 0.68rem; color: var(--muted, #6b7785); }
+.st-range { display: flex; gap: 4px; } .st-range .opt { padding: 2px 8px; font-size: 0.75rem; min-height: 28px; }
+.st-key { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin: 0 3px 0 8px; vertical-align: middle; }
+.st-key.dau, .st-bar i.dau { background: #3b8fd9; } .st-key.new, .st-bar i.new { background: #ffb02e; }
+.st-bars { display: flex; align-items: flex-end; gap: 2px; height: 120px; padding: 14px 0 18px; margin: 4px 0 6px; border-bottom: 1px solid var(--line); }
+.st-bar { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative; min-width: 0; }
+.st-bar i.dau { display: flex; align-items: flex-end; width: 78%; border-radius: 3px 3px 0 0; min-height: 1px; }
+.st-bar i.new { width: 100%; border-radius: 2px 2px 0 0; }
+.st-bar .v { font-size: 0.6rem; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.st-bar small { position: absolute; bottom: -16px; font-size: 0.55rem; color: var(--muted, #6b7785); white-space: nowrap; }
+.st-bars .st-bar:nth-child(odd):not(:last-child) small { visibility: hidden; }
+.st-more { margin: 4px 0 10px; }
+.st-flow { display: grid; grid-template-columns: 8.5em 1fr auto auto; align-items: center; gap: 6px; font-size: 0.8rem; margin: 3px 0; }
+.st-flow i { height: 9px; border-radius: 5px; } .st-flow i.in { background: #34b36b; } .st-flow i.out { background: #e5604f; }
+.st-flow b { font-variant-numeric: tabular-nums; } .st-flow b.good { color: var(--green, #2a9d5b); } .st-flow b.bad { color: var(--red, #d24a3a); }
+.st-flow small { color: var(--muted, #6b7785); font-size: 0.7rem; }
