@@ -1249,3 +1249,11 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .st-flow i { height: 9px; border-radius: 5px; } .st-flow i.in { background: #34b36b; } .st-flow i.out { background: #e5604f; }
 .st-flow b { font-variant-numeric: tabular-nums; } .st-flow b.good { color: var(--green, #2a9d5b); } .st-flow b.bad { color: var(--red, #d24a3a); }
 .st-flow small { color: var(--muted, #6b7785); font-size: 0.7rem; }
+/* ⚡ 수영 효율 미터 */
+.eff-chip { display: block; width: 100%; margin-top: 4px; padding: 3px 6px; letter-spacing: -0.02em; border-radius: 10px; border: 0; font: inherit; font-size: 0.74rem; font-weight: 800; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: #e3f6e8; color: #1f7a3c; }
+.eff-chip.y { background: #fff3cf; color: #8a6200; } .eff-chip.r { background: #ffe1dc; color: #b23a2b; }
+.eff-list { display: grid; gap: 6px; margin: 10px 0; }
+.eff-row { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 7px 10px; border-radius: 10px; background: #f3f6f9; font-size: 0.9rem; }
+.eff-row b { font-variant-numeric: tabular-nums; } .eff-row small { grid-column: 1 / -1; color: var(--muted, #6b7785); font-size: 0.75rem; }
+.eff-row.bad { background: #ffeeea; } .eff-row.bad b { color: #c0392b; } .eff-row.good b { color: #1f7a3c; }
+.eff-zones { background: #f6f9fc; border-radius: 12px; padding: 8px 12px; font-size: 0.8rem; line-height: 1.45; } .eff-zones p { margin: 6px 0 0; }
