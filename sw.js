@@ -1,5 +1,5 @@
 // 오프라인 실행용 서비스 워커: 게임 파일은 캐시 우선, 글꼴은 받아 두었다가 오프라인에서 재사용
-const CACHE = 'swim-master-98a32fa466';
+const CACHE = 'swim-master-dd2b4a1f33';
 const ASSETS = ['./', './index.html', './app.js', './styles.css', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 // 🖼 그림은 따로 오래 보관한다(버전이 바뀌어도 지우지 않음 → 업데이트 때 그림을 다시 받지 않는다). 주소에 ?v=해시가 있어 바뀐 그림만 새로 받는다
 const ART_CACHE = 'swim-art-v1';
