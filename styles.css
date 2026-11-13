@@ -1504,11 +1504,6 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .zoo-cell.lock { background: #f1ece0; border-style: dashed; } .zoo-cell.lock small { background: none; color: #8a7a62; padding: 0; font-size: 0.6rem; }
 @supports (container-type: size) { @container app (orientation: portrait) { .zoo-grid { grid-template-columns: repeat(3, 1fr); } .zoo-card { flex-direction: column; align-items: center; } .zoo-near { max-width: calc(100% - 20px); bottom: calc(60px + var(--safe-b, 0px)); } } }
 @supports not (container-type: size) { @media (orientation: portrait) { .zoo-grid { grid-template-columns: repeat(3, 1fr); } .zoo-card { flex-direction: column; align-items: center; } .zoo-near { max-width: calc(100% - 20px); bottom: calc(60px + var(--safe-b, 0px)); } } }
-/* 📱 화면 방향 고르기 */
-.home-ori { top: calc(194px + var(--safe-t, 0px)) !important; background: rgba(226,240,255,0.95) !important; }
-.ori-pick { display: flex; gap: 10px; } .ori-pick .btn { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; } .ori-pick .btn small { font: 400 0.7rem var(--font); opacity: 0.9; }
-@supports (container-type: size) { @container app (orientation: portrait) { .ori-pick { flex-direction: column; } } }
-@supports not (container-type: size) { @media (orientation: portrait) { .ori-pick { flex-direction: column; } } }
 /* 내 방 위쪽 줄: 좁은 세로 화면에서 '메뉴' 버튼이 눌려 세로 글자가 되지 않게(이름 칩이 대신 줄어든다) */
 .home-top .pill-btn, .home-top .res, .home-top .coin { flex: none; white-space: nowrap; }
 .home-top .me-chip { min-width: 0; flex: 0 1 auto; overflow: hidden; } .home-top .me-chip span { min-width: 0; overflow: hidden; } .home-top .me-chip .lv { flex: none; } .home-top .me-chip .xp { max-width: 100%; }
