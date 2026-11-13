@@ -750,7 +750,8 @@ h1, h2, h3, .tile b, .act, .btn, .pill-btn, .strokes button, .big-ctl, .coin, .r
 .out-pick { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 6px; border-radius: 16px; border: 2px solid #e6dcc8; background: #fffdf8; color: var(--navy); min-height: 96px; }
 .out-pick i { font-style: normal; font-size: 1.7rem; line-height: 1.1; } .out-pick b { font-family: var(--game); font-size: 0.98rem; } .out-pick small { font-size: 0.72rem; color: #8a7a62; line-height: 1.25; }
 .out-pick.hot { border-color: #ff9a3c; background: linear-gradient(180deg, #fff4e4, #fffdf8); }
-.out-grid .out-pick[data-out="tri"] { grid-column: 1 / -1; min-height: 78px; }
+.out-grid .out-pick[data-out="tri"], .out-grid .out-pick[data-out="polo"] { grid-column: 1 / -1; min-height: 78px; }
+.out-pick[data-out="polo"] { border-color: #58b8ff; background: linear-gradient(180deg, #e9f5ff, #fffdf8); }
 .out-pick:first-child { grid-column: 1 / -1; }
 .deck-bar button.out-go { background: linear-gradient(#e9fbe8, #c9f2c7); }
 .xb-list { display: flex; flex-direction: column; gap: 6px; max-height: 46vh; overflow-y: auto; margin: 8px 0; text-align: left; }
@@ -1311,3 +1312,38 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .pp-st em.on { border: 1px solid #d94f4f; color: #c0392b; background: #fff0ee; font-weight: 800; transform: rotate(-3deg); }
 .pp-detail { background: #f6f9fc; border-radius: 12px; padding: 6px 12px; margin: 10px 0; font-size: 0.88rem; } .pp-detail p { margin: 6px 0; }
 .ms-row.wk.now { background: #fff7e0; border-radius: 10px; } .ms-row.wk.got b { color: #2a9d5b; }
+
+/* 🤽 수구(가로 전용: 세로로 들고 있으면 .rot으로 90° 돌려 그린다) */
+.polo { position: absolute; inset: 0; z-index: 9; background: #c9e9e2; overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; }
+.polo.rot { inset: auto; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(90deg); }
+.polo-cv { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.polo-hud { position: absolute; top: 6px; left: calc(50% - 120px); transform: translateX(-50%); display: flex; align-items: center; gap: 10px; padding: 3px 14px; border-radius: 999px; background: rgba(20,36,70,0.84); color: #fff; font-family: var(--game); z-index: 2; white-space: nowrap; }
+.po-t { font-size: 0.82rem; font-weight: 400; } .po-t i { font-style: normal; font-size: 1.3rem; margin: 0 4px; vertical-align: -2px; } .po-t.them { color: #a9c8ff; }
+.po-clock { min-width: 3.1em; text-align: center; font-size: 1rem; color: #ffe27a; } .po-clock.late { color: #ff8a7a; }
+.polo-x { position: absolute; top: 6px; right: 10px; width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.92); color: var(--navy); font-size: 1rem; z-index: 3; }
+.polo-msg { position: absolute; left: calc(50% - 120px); top: 30%; transform: translate(-50%, -50%) scale(0.8); opacity: 0; padding: 8px 18px; border-radius: 16px; background: rgba(20,36,70,0.86); color: #fff; font-family: var(--game); font-size: 1.1rem; transition: opacity 0.15s, transform 0.15s; pointer-events: none; z-index: 2; white-space: nowrap; }
+.polo-msg.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.polo-msg.goal { background: linear-gradient(90deg, #ff9a3d, #ffd54a); color: #3b2500; font-size: 1.5rem; } .polo-msg.bad { background: rgba(125,35,35,0.88); } .polo-msg.go { background: rgba(28,120,92,0.92); }
+.polo-tip { position: absolute; left: calc(50% - 120px); bottom: 6px; transform: translateX(-50%); padding: 3px 12px; border-radius: 999px; background: rgba(255,255,255,0.86); color: var(--navy); font-size: 0.74rem; white-space: nowrap; pointer-events: none; z-index: 2; max-width: 46%; overflow: hidden; text-overflow: ellipsis; }
+.polo-stick { position: absolute; left: 15%; top: 70%; width: 124px; height: 124px; margin: -62px 0 0 -62px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.78); background: rgba(255,255,255,0.18); pointer-events: none; z-index: 2; opacity: 0.55; }
+.polo-stick.on { opacity: 1; }
+.polo-stick i { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%; background: rgba(255,255,255,0.94); box-shadow: 0 2px 6px rgba(0,0,0,0.25); }
+.polo-pad { position: absolute; right: 12px; bottom: 10px; width: 236px; height: 204px; z-index: 3; pointer-events: none; }
+.po-btn { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 4px solid #fff; font-family: var(--game); font-size: 1.05rem; line-height: 1.15; color: #fff; box-shadow: 0 5px 0 rgba(0,0,0,0.2); overflow: hidden; touch-action: none; padding: 0; pointer-events: auto; }
+.po-btn.down { transform: translateY(3px); box-shadow: 0 2px 0 rgba(0,0,0,0.2); filter: brightness(1.12); }
+.po-btn small { display: block; font-size: 0.54rem; opacity: 0.9; font-family: inherit; font-weight: 400; } .po-btn span, .po-btn b { position: relative; font-weight: 400; }
+.po-btn.shoot { right: 0; bottom: 30px; width: 96px; height: 96px; font-size: 1.25rem; background: linear-gradient(#ffa64d, #ff7a1a); }
+.po-btn.shoot.blk { background: linear-gradient(#3ccfb4, #17a48a); }
+.po-btn.shoot em { position: absolute; left: 0; top: 0; height: 100%; width: 0; background: rgba(255,244,130,0.8); }
+.po-btn.pass { right: 104px; bottom: 0; width: 82px; height: 82px; background: linear-gradient(#58b8ff, #2f86e0); }
+.po-btn.dash { right: 112px; bottom: 92px; width: 70px; height: 70px; font-size: 0.92rem; background: #2c9a52; }
+.po-btn.dash em { position: absolute; left: 0; right: 0; bottom: 0; height: 100%; background: linear-gradient(#6fe08c, #37b765); } .po-btn.dash.low { filter: grayscale(0.7); }
+.po-btn.fake { right: 14px; bottom: 136px; width: 64px; height: 64px; font-size: 0.86rem; background: linear-gradient(#b68cf0, #8a5cd6); }
+.po-btn.off, .po-btn.cool { filter: grayscale(0.85); opacity: 0.55; }
+.polo-sheet { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(20,40,80,0.45); padding: 10px; z-index: 5; }
+.polo-sheet.show { display: flex; }
+.po-card { width: min(560px, 100%); background: #fffdf8; border: 3px solid #fff; border-radius: 22px; padding: 12px 16px; display: flex; flex-direction: column; gap: 7px; text-align: center; color: var(--navy); box-shadow: 0 8px 24px rgba(0,0,0,0.25); max-height: 96%; overflow: auto; }
+.po-title { font-family: var(--game); font-size: 1.3rem; } .po-sub { margin: 0; font-size: 0.84rem; color: #6c6250; }
+.po-how { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 12px; text-align: left; font-size: 0.8rem; line-height: 1.3; }
+.po-lv, .po-row { display: flex; gap: 8px; justify-content: center; } .po-lv .btn, .po-row .btn { flex: 1; }
+.po-score { font-family: var(--game); font-size: 2.3rem; line-height: 1.05; color: #e0492f; } .po-rw { margin: 0; font-size: 0.88rem; color: #2f7a4a; }
