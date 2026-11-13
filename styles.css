@@ -730,6 +730,46 @@ h1, h2, h3, .tile b, .act, .btn, .pill-btn, .strokes button, .big-ctl, .coin, .r
 .cer-row button small { font-size: 0.6rem; color: #b45309; }
 .combo-chip { position: absolute; left: 50%; bottom: calc(220px + var(--safe-b)); transform: translateX(-50%); z-index: 5; padding: 4px 16px; border-radius: 999px; background: linear-gradient(#ffb347, #ff6b1a); border: 3px solid #fff; color: #fff; font-family: var(--game); font-size: 1.15rem; pointer-events: none; }
 .combo-chip.bump { animation: combo-bump 0.25s ease-out; }
+.tri-chip { position: absolute; left: 50%; top: calc(104px + var(--safe-t, 0px)); transform: translateX(-50%); z-index: 6; padding: 5px 14px; border-radius: 999px; background: linear-gradient(#2c3e66, #1b2747); border: 2px solid #ffd54a; color: #fff6c8; font-family: var(--game); font-size: 0.86rem; white-space: nowrap; pointer-events: none; box-shadow: 0 3px 10px rgba(0,0,0,0.25); }
+.out-hud { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 6px 12px; border-radius: 14px; background: rgba(255,255,255,0.92); font-size: 0.9rem; color: var(--navy); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.out-hud b { font-family: var(--game); font-size: 1rem; }
+.out-hud em { font-style: normal; font-family: var(--game); min-width: 5.2em; text-align: center; color: #ff7a1a; }
+.out-hud em[data-g="PERFECT"] { color: #e0362f; } .out-hud em[data-g="SAME"], .out-hud em[data-g="FAST"] { color: #8a8f99; }
+.out-dots { display: inline-flex; gap: 4px; } .out-dots i { font-style: normal; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: #e9edf3; font-size: 0.85rem; opacity: 0.75; } .out-dots i.on { background: #fff3c4; opacity: 1; box-shadow: 0 0 0 2px #ffcf4a; }
+.out-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; align-items: center; }
+.out-pads { display: flex; gap: 14px; justify-content: center; width: 100%; }
+.out-pad { flex: 1; max-width: 190px; min-height: 92px; border-radius: 26px; border: 4px solid #fff; background: linear-gradient(#ffb347, #ff7a1a); color: #fff; font-family: var(--game); font-size: 1.35rem; box-shadow: 0 6px 0 #c9560e, 0 8px 16px rgba(0,0,0,0.2); touch-action: none; user-select: none; -webkit-user-select: none; }
+.out-pad.r { background: linear-gradient(#5ec3f2, #2f86e0); box-shadow: 0 6px 0 #1d5fae, 0 8px 16px rgba(0,0,0,0.2); }
+.out-pad small { display: block; font-size: 0.7rem; opacity: 0.8; } .out-pad:active { transform: translateY(4px); box-shadow: 0 2px 0 #c9560e; } .out-pad.r:active { box-shadow: 0 2px 0 #1d5fae; }
+.out-today { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1px 10px; margin: 10px 0 0; padding: 9px 12px; border-radius: 16px; border: 2px solid #ffd54a; background: linear-gradient(180deg, #fff8d6, #fffdf4); color: var(--navy); text-align: left; }
+.out-today span { grid-column: 1 / -1; font-size: 0.74rem; font-weight: 700; color: #b07a00; }
+.out-today b { grid-column: 1; font-family: var(--game); font-size: 0.98rem; line-height: 1.25; } .out-today small { grid-column: 1; font-size: 0.76rem; color: #8a7a62; }
+.out-today .btn { grid-column: 2; grid-row: 2 / span 2; white-space: nowrap; }
+.out-today.done { border-color: #cfe6c9; background: #f4fbf1; } .out-today.done span { color: #3f8a4a; }
+.out-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 10px 0; }
+.out-pick { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 6px; border-radius: 16px; border: 2px solid #e6dcc8; background: #fffdf8; color: var(--navy); min-height: 96px; }
+.out-pick i { font-style: normal; font-size: 1.7rem; line-height: 1.1; } .out-pick b { font-family: var(--game); font-size: 0.98rem; } .out-pick small { font-size: 0.72rem; color: #8a7a62; line-height: 1.25; }
+.out-pick.hot { border-color: #ff9a3c; background: linear-gradient(180deg, #fff4e4, #fffdf8); }
+.out-grid .out-pick[data-out="tri"] { grid-column: 1 / -1; min-height: 78px; }
+.out-pick:first-child { grid-column: 1 / -1; }
+.deck-bar button.out-go { background: linear-gradient(#e9fbe8, #c9f2c7); }
+.xb-list { display: flex; flex-direction: column; gap: 6px; max-height: 46vh; overflow-y: auto; margin: 8px 0; text-align: left; }
+.xb-row { padding: 7px 9px; border-radius: 12px; border: 2px solid #ecdcc2; background: #fffdf8; }
+.xb-row.full { border-color: #ffcf4a; background: linear-gradient(180deg, #fff6d8, #fffdf8); }
+.xb-row > b { display: block; font-size: 0.9rem; color: var(--navy); } .xb-row > b small { font-weight: 400; color: #8a7a62; }
+.xb-dots { display: flex; gap: 4px; margin-top: 4px; } .xb-dots i { flex: 1; min-width: 0; font-style: normal; text-align: center; font-size: 1.15rem; padding: 3px 0 2px; border-radius: 9px; background: #eef1f5; opacity: 0.6; }
+.xb-dots i.on { background: #fff3c4; opacity: 1; } .xb-dots em { display: block; font-style: normal; font-size: 0.56rem; color: #6a5a44; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 2px; }
+.xb-stats { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; font-size: 0.82rem; color: var(--navy); } .xb-stats span { padding: 3px 9px; border-radius: 999px; background: #eaf4fb; }
+.tri-time { font-family: var(--game); font-size: 2.6rem; color: #e0362f; text-align: center; margin: 6px 0 2px; }
+.tri-splits { display: flex; justify-content: center; gap: 12px; font-size: 0.95rem; color: var(--navy); margin-bottom: 6px; }
+.fever-bar { position: absolute; left: 50%; bottom: calc(196px + var(--safe-b)); transform: translateX(-50%); z-index: 5; width: 132px; height: 15px; border-radius: 999px; background: rgba(20,40,80,0.45); border: 2px solid rgba(255,255,255,0.9); overflow: hidden; pointer-events: none; }
+.fever-bar > i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 999px; background: linear-gradient(90deg, #5ec3f2, #6bdc8b, #ffe66d, #ff9a3d); transition: width 0.18s ease-out; }
+.fever-bar > b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--game); font-size: 0.68rem; line-height: 1; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.6); white-space: nowrap; }
+.fever-bar.on { width: 168px; height: 20px; border-color: #fff; box-shadow: 0 0 16px #ffe66d; }
+.fever-bar.on > i { background: linear-gradient(90deg, #ff6b6b, #ffe66d, #6bdc8b, #5ec3f2, #b48ee0, #ff6b6b); background-size: 200% 100%; animation: combo-rainbow 0.8s linear infinite; transition: width 0.1s linear; }
+.fever-bar.on > b { font-size: 0.82rem; }
+.pool-screen.fever::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 2; box-shadow: inset 0 0 46px 10px rgba(255,214,90,0.55); animation: fever-glow 0.9s ease-in-out infinite alternate; }
+@keyframes fever-glow { from { box-shadow: inset 0 0 40px 8px rgba(255,120,200,0.45); } to { box-shadow: inset 0 0 54px 14px rgba(120,220,255,0.55); } }
 @keyframes combo-bump { from { transform: translateX(-50%) scale(1.5); } to { transform: translateX(-50%) scale(1); } }
 .judge { font-family: var(--game); font-size: 2rem; color: #fff; text-shadow: 0 3px 0 rgba(0,0,0,0.25), 0 0 14px currentColor; animation: judge-pop 0.8s ease-out forwards; white-space: nowrap; }
 .judge.perfect { color: #ff6bd6; font-size: 2.6rem; text-shadow: 0 3px 0 #7a2a6a, 0 0 22px #ff6bd6; }
@@ -1056,7 +1096,7 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .deck-acts { gap: 7px; }
 .spot-row { display: flex; gap: 6px; justify-content: center; }
 .spot-row .btn.small { min-height: 38px; padding: 6px 16px; font-size: 0.95rem; }
-.deck-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; width: 100%; padding: 5px; border-radius: 16px; background: rgba(255,255,255,0.88); box-shadow: 0 2px 10px rgba(0,0,0,0.12); box-sizing: border-box; }
+.deck-bar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; width: 100%; padding: 5px; border-radius: 16px; background: rgba(255,255,255,0.88); box-shadow: 0 2px 10px rgba(0,0,0,0.12); box-sizing: border-box; }
 .deck-bar button { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 5px 0 4px; border: 0; border-radius: 12px; background: transparent; font: 700 0.68rem var(--game); color: var(--navy); white-space: nowrap; }
 .deck-bar button i { font-style: normal; font-size: 1.35rem; line-height: 1.1; }
 .deck-bar button:active { background: #e6f1f8; }
