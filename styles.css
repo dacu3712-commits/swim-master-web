@@ -1375,7 +1375,7 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .ow-row small { color: var(--muted); font-size: 0.75rem; }
 .ow-row.on { border-color: #1fa34a; background: #effbf2; }
 .fw-float.air-float { top: calc(238px + var(--safe-t, 0px)); background: linear-gradient(180deg, #2b2f38, #0f1115); color: #ffd400; }
-.fw-float.rkt-float { top: calc(238px + var(--safe-t, 0px)); background: linear-gradient(180deg, #ff9a3d, #e0521a); color: #fff; animation: promo-pulse 1s ease-in-out infinite; }
+.fw-float.rkt-float { top: calc(330px + var(--safe-t, 0px)); background: linear-gradient(180deg, #ff9a3d, #e0521a); color: #fff; } /* (에어쇼 · 먹이 주기 버튼 아래 — 로켓은 쉬지 않고 쏘니까 두근거리지 않게) */
 .rk-next { margin: 4px 0; padding: 8px 10px; border-radius: 12px; background: #f1f6ff; color: #2c4a7a; font-size: 0.9rem; text-align: center; }
 .fw-float.feed-float { top: calc(284px + var(--safe-t, 0px)); background: linear-gradient(180deg, #5fd0ff, #1d7fd1); animation: promo-pulse 1s ease-in-out infinite; }
 .race-tabs { align-items: center; flex-wrap: wrap; }
