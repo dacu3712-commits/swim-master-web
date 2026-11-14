@@ -1448,6 +1448,7 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .po-btn.shoot.blk { background: linear-gradient(#3ccfb4, #17a48a); }
 .po-btn.shoot em { position: absolute; left: 0; top: 0; height: 100%; width: 0; background: rgba(255,244,130,0.8); }
 .po-btn.pass { right: 104px; bottom: 0; width: 82px; height: 82px; background: linear-gradient(#58b8ff, #2f86e0); }
+.po-btn.thru { right: 194px; bottom: 28px; width: 62px; height: 62px; font-size: 0.86rem; background: linear-gradient(#5fd6c8, #1fa39a); } /* 🎯 스루패스(패스 버튼 왼쪽) */
 .po-btn.dash { right: 112px; bottom: 92px; width: 70px; height: 70px; font-size: 0.92rem; background: #2c9a52; }
 .po-btn.dash em { position: absolute; left: 0; right: 0; bottom: 0; height: 100%; background: linear-gradient(#6fe08c, #37b765); } .po-btn.dash.low { filter: grayscale(0.7); }
 .po-btn.fake { right: 14px; bottom: 136px; width: 64px; height: 64px; font-size: 0.86rem; background: linear-gradient(#b68cf0, #8a5cd6); }
