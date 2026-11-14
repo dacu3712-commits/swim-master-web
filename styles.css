@@ -1512,5 +1512,9 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .home-top .me-chip { min-width: 0; flex: 0 1 auto; overflow: hidden; } .home-top .me-chip span { min-width: 0; overflow: hidden; } .home-top .me-chip .lv { flex: none; } .home-top .me-chip .xp { max-width: 100%; }
 /* 돌보기 줄의 빈 자리는 눌림을 막지 않는다(그 아래 바닥을 눌러 걸어갈 수 있게) */
 .care-row { pointer-events: none; } .care-row > * { pointer-events: auto; }
+/* 🧭 자유 탐험: 왼손 스틱 */
+.roam-stick { position: absolute; left: calc(14px + var(--safe-l, 0px)); bottom: calc(286px + var(--safe-b, 0px)); width: 104px; height: 104px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.85); background: rgba(30,60,110,0.28); z-index: 5; touch-action: none; opacity: 0.75; }
+.roam-stick[hidden] { display: none; } .roam-stick.on { opacity: 1; }
+.roam-stick i { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: rgba(255,255,255,0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.3); pointer-events: none; }
 
 @supports (container-type: size) { body { container: app / size; } }
