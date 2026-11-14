@@ -1225,6 +1225,22 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; justif
 .mood-tips { margin-top: 10px; padding: 8px 10px; border-radius: 12px; background: #fff7e6; display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; }
 .whisper-pop { position: absolute; left: 50%; top: calc(70px + var(--safe-t, 0px)); transform: translateX(-50%); z-index: 40; width: min(calc(88 * var(--vw, 1vw)), 340px); animation: whIn 0.35s ease-out; }
 .whisper-pop[hidden] { display: none; }
+/* 🎯 1:1 대결 신청 카드: 받는 사람 화면 위쪽 한가운데에 크게 */
+.duel-pop { position: absolute; left: 50%; top: calc(96px + var(--safe-t, 0px)); transform: translateX(-50%); z-index: 45; width: min(calc(92 * var(--vw, 1vw)), 360px); animation: whIn 0.35s ease-out; }
+.duel-pop[hidden] { display: none; }
+.duel-card { padding: 14px 16px 16px; border-radius: 20px; background: linear-gradient(160deg, #fff7df, #ffe1c2); border: 3px solid #ff8a3d; box-shadow: 0 10px 30px rgba(170, 70, 0, 0.38); display: flex; flex-direction: column; gap: 8px; color: #5a2a00; text-align: center; }
+.duel-card .duel-t { font-size: 1.2rem; }
+.duel-card p { margin: 0; font-size: 1.02rem; word-break: keep-all; }
+.duel-card small { color: #8a5a30; }
+.duel-info { display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; }
+.duel-info span { padding: 4px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.9); font-weight: 700; font-size: 0.95rem; }
+.duel-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
+.duel-btns .btn { margin: 0; min-height: 52px; font-size: 1.05rem; }
+.duel-btns #duYes { background: linear-gradient(180deg, #37c871, #1f9f55); color: #fff; }
+.duel-btns #duNo { background: #fff; color: #b3261e; border: 2px solid #e2a09b; }
+/* 🤫 조용히 게임하기: 쇼 알림 단추 · 첫걸음 안내도 숨긴다 */
+.pool-screen.quiet .fw-float, .pool-screen.quiet .ob-chip { display: none !important; }
+.hub-grid button.on { outline: 2px solid var(--mint, #2bb673); }
 .wh-card { padding: 12px 14px; border-radius: 16px; background: linear-gradient(135deg, #fbe9ff, #ffe3f1); border: 2px solid #d48ae8; box-shadow: 0 8px 24px rgba(120,40,140,0.3); display: flex; flex-direction: column; gap: 6px; color: #4a1f5a; }
 .wh-card p { margin: 0; padding: 8px 10px; border-radius: 10px; background: rgba(255,255,255,0.85); font-size: 1rem; word-break: keep-all; overflow-wrap: anywhere; }
 @keyframes whIn { from { opacity: 0; transform: translate(-50%, -12px) scale(0.95); } to { opacity: 1; transform: translate(-50%, 0) scale(1); } }
